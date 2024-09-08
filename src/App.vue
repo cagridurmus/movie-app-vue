@@ -1,30 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <language-selector/>
   <router-view/>
 </template>
 
+<script>
+  import LanguageSelector from './components/LanguageSelector.vue'
+  export default {
+    components: {
+      LanguageSelector
+    },
+    created(){
+      if(!localStorage.getItem('apiKey')){
+        localStorage.setItem('apiKey', '?api_key=9351e600f206895685446eaf2d115b94')
+      } 
+    }
+  }
+</script>>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
