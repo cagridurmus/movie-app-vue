@@ -12,7 +12,7 @@
             }
         },
         computed:{
-            async getImagePath(){
+            getImagePath(){
                 return ImageAPIUrlpath + `w500${this.imagePath}`
             }
         }

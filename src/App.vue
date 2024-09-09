@@ -5,13 +5,14 @@
 
 <script>
   import LanguageSelector from './components/LanguageSelector.vue'
+  İM
   export default {
     components: {
       LanguageSelector
     },
     created(){
       if(!localStorage.getItem('apiKey')){
-        localStorage.setItem('apiKey', '?api_key=9351e600f206895685446eaf2d115b94')
+        localStorage.setItem('apiKey', `?api_key=${process.VUE_MOVIE_APP_API_KEY}`)
       } 
     }
   }
